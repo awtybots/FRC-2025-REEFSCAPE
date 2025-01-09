@@ -1,0 +1,21 @@
+name: Spotless
+
+on: [push]
+
+jobs:
+  # For future maintainers, taken from: https://docs.wpilib.org/en/stable/docs/software/advanced-gradlerio/code-formatting.html
+  # Check back there and compare if it doesn't work next year. Note that spotless.yml and the build file work together for this.
+  spotless:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Setup java-17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: 17
+      - name: Spotless check
+        run: ./gradlew spotlessCheck
