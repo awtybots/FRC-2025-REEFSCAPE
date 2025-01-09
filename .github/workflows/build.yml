@@ -1,11 +1,14 @@
 name: Build
 
 on:
+  # These fields being blank makes it apply to all branches and PRs.
   push:
   pull_request:
 
 jobs:
   build:
+    # For future maintainers, taken from: https://docs.wpilib.org/en/stable/docs/software/advanced-gradlerio/robot-code-ci.html
+    # Check back there and compare if it doesn't work next year.
     runs-on: ubuntu-22.04
     container: wpilib/roborio-cross-ubuntu:2025-22.04
     steps:

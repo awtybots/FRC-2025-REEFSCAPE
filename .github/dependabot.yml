@@ -1,6 +1,14 @@
 # Please see the documentation for all configuration options:
 # https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
 
+
+# Note to people reading this: this is a commented out file so it doesn't do anything at the moment, 
+# but this just automatically updates junit dependencies. Not really necessary, as you usually do it
+# yourself, but good to make commits more clear as to what they are and slightly reduces irrelevant changes
+# when trying to find out what a commit someone else did does. Feel free to use it if you want to 
+# constantly accept pull requests lol.
+
+
 # version: 2
 # updates:
 #   - package-ecosystem: "gradle" 
