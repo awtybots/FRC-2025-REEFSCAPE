@@ -3,6 +3,8 @@ name: Spotless
 on: [push]
 
 jobs:
+  # For future maintainers, taken from: https://docs.wpilib.org/en/stable/docs/software/advanced-gradlerio/code-formatting.html
+  # Check back there and compare if it doesn't work next year. Note that spotless.yml and the build file work together for this.
   spotless:
     runs-on: ubuntu-latest
     steps:

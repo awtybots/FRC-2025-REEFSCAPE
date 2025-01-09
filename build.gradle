@@ -110,6 +110,9 @@ tasks.withType(JavaCompile) {
 
 // Spotless formatting
 project.compileJava.dependsOn(spotlessApply)
+// For future maintainers, the below is taken from: 
+// https://docs.wpilib.org/en/stable/docs/software/advanced-gradlerio/code-formatting.html
+// Check back there and compare if it doesn't work next year. Note that spotless.yml and the build file work together for this.
 spotless {
     java {
         target fileTree(".") {
@@ -152,8 +155,8 @@ spotless {
     }
 }
 
-// A grave sin, but necessary for other programmers to use this system lol
-// (applies spotless on build)
+// A grave sin, but necessary for other programmers to use this system lol (applies spotless on build)
+// This is from FRC-2024, specifically added cause people were not using ./gradlew spotlessApply ):
 afterEvaluate {
     tasks.getByName('spotlessCheck').dependsOn(tasks.getByName('spotlessApply'))
 }
