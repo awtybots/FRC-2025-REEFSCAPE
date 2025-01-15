@@ -6,7 +6,7 @@ import frc.robot.subsystems.Elevator;
 public class ElevatorUp extends Command {
   private final Elevator elevator;
 
-  public ElevatorUp(Elevator elevator) {
+  public ElevatorDown(Elevator elevator) {
     this.elevator = elevator;
 
     addRequirements(elevator);
@@ -14,7 +14,7 @@ public class ElevatorUp extends Command {
 
   @Override
   public void execute() {
-    elevator.up();
+    elevator.down();
   }
 
   @Override

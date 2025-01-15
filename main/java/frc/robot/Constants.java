@@ -54,12 +54,12 @@ public final class Constants {
     public static final int kRearRightTurningCanId = 16;
 
     public static final boolean kGyroReversed = false;
-
   }
-  
-  public static final class ElevatorConstants{
-    public static final int ElevatorMotor = 20;
-  }  
+
+  public static final class ElevatorConstants {
+    public static final int ElevatorMotorRight = 20;
+    public static final int ElevatorMotorLeft = 21;
+  }
 
   public static final class ModuleConstants {
     // The MAXSwerve module can be configured with one of three pinion gears: 12T,

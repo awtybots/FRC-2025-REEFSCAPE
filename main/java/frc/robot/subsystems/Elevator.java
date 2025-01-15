@@ -4,34 +4,37 @@ import com.revrobotics.CANSparkMax;
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants.ElevatorConstants;
 
-public class Elevator extends SubsystemBase{
-  private final CANSparkMax ElevatorMotor;
+public class Elevator extends SubsystemBase {
+  private final CANSparkMax ElevatorMotorRight;
 
-  public Elevator(int ElevatorMotorID) {
-    ElevatorMotor = new CANSparkMax(ElevatorConstants.ElevatorMotor, CANSparkMax.MotorType.kBrushless);
-
+  public Elevator(int ElevatorMotorRightID, int ElevatorMotorLeftID) {
+    ElevatorMotorRight =
+        new CANSparkMax(ElevatorConstants.ElevatorMotorRight, CANSparkMax.MotorType.kBrushless);
+    ElevatorMotorLeft =
+        new CANSparkMax(ElevatorConstants.ElevatorMotorLeft, CANSparkMax.MotorType.kBrushless);
   }
 
   // Spins intake motor to intake notes
   public void up() {
-    ElevatorMotor.set(1);
+    ElevatorMotorRight.set(1);
+    ElevatorMotorLeft.set(1);
   }
 
   public void down() {
-    ElevatorMotor.set(-1);
+    ElevatorMotorRight.set(-1);
+    ElevatorMotorLeft.set(-1);
   }
 
   public void hold() {
-    ElevatorMotor.set(0);
+    ElevatorMotorRight.set(0);
+    ElevatorMotorLeft.set(0);
   }
 
   @Override
-  public void periodic() {
-
-  }
+  public void periodic() {}
 
   public void stop() {
-    ElevatorMotor.stopMotor();
+    ElevatorMotorRight.stopMotor();
+    ElevatorMotorLeft.stopMotor();
   }
-
 }
