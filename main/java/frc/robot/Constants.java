@@ -59,6 +59,31 @@ public final class Constants {
   public static final class ElevatorConstants {
     public static final int ElevatorMotorRight = 20;
     public static final int ElevatorMotorLeft = 21;
+    public static final int HumanLoadPosition = 0;
+    public static final int L1Postion = 0;
+    public static final int L2Position = 1;
+    public static final int L3Position = 2;
+    public static final int L4Position = 3;
+    public static final int AlgaeNetPosition = 4;
+
+  }
+  public static final class CoralIntakeConstants {
+    public static final int CoralIntakeMotor = 30;
+    public static final int CoralFlatPosition = 0;
+    public static final int CoralStraightPosition = 1;
+  }
+  public static final class ArmConstants {
+    public static final int ArmMotor = 40;
+    public static final int ArmFlatPosition = 0;
+    public static final int ArmStraightPosition = 1;
+    public static final int ArmHumanLoadPosition = 2;
+    public static final int ArmAlgaeNetPosition = 3;
+    public static final int ArmLeftGroundPickUpPosition = 4;
+    public static final int ArmRightGroundPickUpPosition = 5;
+    public static final int ArmStowedPosition = 6;
+  }
+  public static final class AlgaeIntakeConstants {
+    public static final int AlgaeIntakeMotor = 50;
   }
 
   public static final class ModuleConstants {
