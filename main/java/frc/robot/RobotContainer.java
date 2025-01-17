@@ -23,6 +23,8 @@ import frc.robot.Constants.AutoConstants;
 import frc.robot.Constants.DriveConstants;
 import frc.robot.Constants.OIConstants;
 import frc.robot.subsystems.DriveSubsystem;
+import frc.robot.commands.ElevatorDown;
+import frc.robot.commands.ElevatorUp;
 import frc.robot.subsystems.Elevator;
 import java.util.List;
 
@@ -35,7 +37,7 @@ import java.util.List;
 public class RobotContainer {
   // The robot's subsystems
   private final DriveSubsystem m_robotDrive = new DriveSubsystem();
-  private final Elevator elevator = new Elevator(20);
+  private final Elevator elevator = new Elevator();
 
   // The driver's controller
   XboxController m_driverController = new XboxController(OIConstants.kDriverControllerPort);

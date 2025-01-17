@@ -1,26 +1,21 @@
-import frc.robot.subsystems.MechanicalParts.ElevatorSubsystem;
-import frc.robot.Commands.PostionsCommands;
-
-
-
 public class ElevatorGroundPickUp {
-    
-    private final Elevator elevator;
 
-    public ElevatorGroundPickUp(Elevator elevator) {
-        this.elevator = elevator;
+  private final Elevator elevator;
 
-        addRequirements(elevator);
-    }
+  public ElevatorGroundPickUp(Elevator elevator) {
+    this.elevator = elevator;
 
-    @Override
-    public void execute() {
-        if (!elevator.atTargetExtent()) return;
-        elevator.setDegrees(ElevatorGroundPickUp.ElevatorPosition);
-    }
+    addRequirements(elevator);
+  }
 
-    @Override
-    public void end(boolean interrupted) {
-        elevator.hold();
-    }
+  @Override
+  public void execute() {
+    if (!elevator.atTargetExtent()) return;
+    elevator.setDegrees(ElevatorGroundPickUp.ElevatorPosition);
+  }
+
+  @Override
+  public void end(boolean interrupted) {
+    elevator.hold();
+  }
 }

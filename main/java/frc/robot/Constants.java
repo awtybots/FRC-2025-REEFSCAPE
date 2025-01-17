@@ -65,13 +65,14 @@ public final class Constants {
     public static final int L3Position = 2;
     public static final int L4Position = 3;
     public static final int AlgaeNetPosition = 4;
-
   }
+
   public static final class CoralIntakeConstants {
     public static final int CoralIntakeMotor = 30;
     public static final int CoralFlatPosition = 0;
     public static final int CoralStraightPosition = 1;
   }
+
   public static final class ArmConstants {
     public static final int ArmMotor = 40;
     public static final int ArmFlatPosition = 0;
@@ -82,8 +83,9 @@ public final class Constants {
     public static final int ArmRightGroundPickUpPosition = 5;
     public static final int ArmStowedPosition = 6;
   }
+
   public static final class AlgaeIntakeConstants {
-    public static final int AlgaeIntakeMotor = 50;
+    public static final int AlgaeIntakeMotorID = 50;
   }
 
   public static final class ModuleConstants {
